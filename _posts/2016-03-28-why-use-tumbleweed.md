@@ -7,7 +7,7 @@ People often ask me why they should use [openSUSE Tumbleweed](http://www.opensus
 
 Both are 'traditional', released-based distributions. They build it carefully over a few months, they ship it, and they then cautiously patch things (often keeping those changes as small as possible, backports, etc) to keep it secure/usable for their users over their chosen lifespan
 
-If you're interested in an openSUSE like that, we have [Leap](http://www.opensuse.org), and I believe Leap to be better than Fedora and Ubuntu for a whole bunch of reasons, starting with the fact that Leap has an Enterprise codebase (SUSE Linux Enterprise to be exact) at it's heart with the openSUSE Project building a fully-fledged community distribution ontop of it.
+If you're interested in an openSUSE like that, we have [Leap](http://www.opensuse.org), and I believe Leap to be better than Fedora and Ubuntu for a whole bunch of reasons, starting with the fact that Leap has an Enterprise codebase (SUSE Linux Enterprise to be exact) at its heart with the openSUSE Project building a fully-fledged community distribution ontop of it.
 
 But today I want to talk about Tumbleweed  
 While Leap aims to be rock-solid, Tumbleweed rolls
