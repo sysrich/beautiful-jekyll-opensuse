@@ -1,6 +1,6 @@
-# --- Sysrich Options --- #
-# jekyll-paginate needed by Jekyll 3.0
-gems: [jekyll-paginate]
+# --- Jekyll 3 Options --- #
+# jekyll-paginate needed by Jekyll 3, uncomment the line below if you're using Jekyll 3
+#gems: [jekyll-paginate]
 
 # --- General options --- #
 
@@ -8,7 +8,7 @@ gems: [jekyll-paginate]
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://rootco.de"
+url: "http://username.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -18,10 +18,10 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: rootco.de
+title: MyOpenSUSEBlog
 
 # Short description of your site
-description: Ramblings of a Geek, mostly about Linux, openSUSE, SUSE, and openQA.
+description: My Blog about openSUSE and other cool FOSS stuff.
 
 # --- Navigation bar options --- #
 
@@ -31,8 +31,6 @@ navbar-links:
   Stuff I Work On:
     - openSUSE: "https://www.opensuse.org"
     - openQA: "https://openqa.opensuse.org"
-    - Presentations: "https://speakerdeck.com/sysrich"
-
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -43,20 +41,20 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Richard Brown
-  email: "rbrown@opensuse.org"
+  name: yourname
+  email: "youremail@wherever.com"
   facebook: yourname  # eg. daattali
-  github: sysrich    # eg. daattali
-  twitter: sysrich   # eg. daattali
-  linkedin: in/sysrich  # eg. "pub/dean-attali/8/946/143"
-  googleplus: +RichardBrownSYS # eg. "+RichardBrownSYS"
+  github: yourname    # eg. daattali
+  twitter: yourname  # eg. daattali
+  linkedin: yourname  # eg. "pub/dean-attali/8/946/143"
+  googleplus: yourname # eg. "+RichardBrownSYS"
   stackoverflow: yourlink  # eg. "3943160/daattali"
  
 # Select which links to show in the footer
 footer-links-active:
   rss: true
   facebook: false
-  email: true
+  email: false
   twitter: true
   github: true
   linkedin: true
@@ -65,7 +63,7 @@ footer-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "rootco.de"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "username.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 
