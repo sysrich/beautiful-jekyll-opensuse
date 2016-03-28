@@ -1,0 +1,19 @@
+---
+layout: post
+title: Testing openSUSE 12.2 RC1
+date: '2012-07-15 13:39:21 +0200'
+categories:
+- Tech Tips
+tags: []
+---
+<p>openSUSE 12.2 Release Candidate 1 is now available - <a href="http://news.opensuse.org/2012/07/12/opensuse-12-2-rc1-available-for-testing/">Click to read the full release announcement</a></p>
+<p>After a 'less than ideal' time trying to get the earlier betas running on my Thinkpad X220, I'm pleased to report that this Release Candidate installs openSUSE 12.2 perfectly.</p>
+<p>Some First impressions</p>
+<p>The Grub2 Boot loader is now themed (but doesn't install that theme by default - fix already done for RC2)<br />
+It's a valiant effort but the openSUSE icon needs a little work, the font is a bit ugly, and the screen resolution detection is totally borked on my i915 video card. Oh and the progress bar is an ugly grey, I think it should be a light green (Expect to see some commits from me trying to fix these on Monday)</p>
+<p>Libreoffice is still using my early 12.2 draft artwork that is totally wrong with the final 12.2 design (Fix already submitted and in for RC2)</p>
+<p>Power consumption on my X220 is 'better' than stock 12.1, but way worse than with my tunings from bug <a href="https://bugzilla.novell.com/show_bug.cgi?id=717454">717454</a> . <del>Over the next few days I'll be testing the following theoretical best kernel parameters for improving power consumption and will report here if they work</del></p>
+<blockquote><p><del>pcie_aspm=powersave i915.i915_enable_rc6=7 i915.i915_enable_fbc=1 i915.lvds_downclock=1</p>
+<p></del></p></blockquote>
+<p><a title="Reducing Laptop Power Consumption on openSUSE 12.2 (Sandybridge)" href="/tech tips/2012/07/16/reducing-laptop-power-consumption-on-opensuse-12-2-sandybridge.html">EDIT: I've tested power consumption in 12.2, and my findings are HERE</a></p>
+<p>But basically, it's all looking pretty good! Really liking GNOME 3.4</p>

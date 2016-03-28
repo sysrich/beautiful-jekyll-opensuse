@@ -1,0 +1,47 @@
+---
+layout: post
+title: Intel Power Management on openSUSE 12.3
+date: '2013-03-17 23:46:26 +0100'
+categories:
+- Tech Tips
+tags: []
+---
+<p>Regular readers may recall that I've done quite a bit of work looking into optimising Power Management in openSUSE on Laptops using Intel Chipsets (especially the Sandybridge/Ivybridge chipsets and their integrated graphics)</p>
+<p><a href="/tech tips/2012/07/16/reducing-laptop-power-consumption-on-opensuse-12-2-sandybridge.html">You can read my previous article HERE, where I go into some detail about lots of options available and my recommendations</a></p>
+<p>Having tested these settings in the recently <a href="https://news.opensuse.org/2013/03/13/opensuse-12-3-free-open-and-awesome/">released openSUSE 12.3</a> I'd like to share that my previous recommendations still hold true for the latest release, and indeed seems to produce even better results than they did in 12.2, with my laptops power consumption now regularly below 10W<em><strong> (but with an important caveat about suspend/resume, please read my NOTE at the end of this article)</strong></em></p>
+<p>If you'd like to benefit from these settings, all you need to do is:</p>
+<ul>
+<li>Fire up YaST</li>
+<li>Go to Boot Loader</li>
+<li>Find the field for 'Optional Kernel Command Line Parameter'
+<ul>
+<li>If you're using Grub2 this is under "Boot Loader Options"</li>
+<li>If you're using Grub1 this is under the Edit option for whichever Grub menu entry fires up openSUSE 12.2</li>
+</ul>
+</li>
+<li>Add the following to the end of the line (which usually ends in 'showopts')</li>
+</ul>
+<blockquote><p>i915.i915_enable_rc6=7 i915.i915_enable_fbc=1 i915.lvds_downclock=1 drm.vblankoffdelay=1</p></blockquote>
+<ul>
+<li>Click OK, Close YaST, reboot your system, and you should be home free with a laptop with a power consumption lasting twice as long<br />
+<span style="font-size: 14px; line-height: 1.8em;">Please let me know how it works out for you in the comments below!</span></li>
+</ul>
+<p><strong>Why aren't these the defaults?</strong></p>
+<p>While these settings have worked well on all of my hardware and I've received no reports of problems from anyone using them, they are using features and functions of drivers which the developers and relevant kernel maintainers do not sufficiently trust to be default.</p>
+<p>I've been told that this is in part due to anomalies with specific chipsets, or concerns about firmware possibly causing problems.</p>
+<p>So while I've come to trust these settings on all my machines, please be aware the settings might not be safe for your hardware.</p>
+<p>If you'd like to work on making these settings the default for openSUSE, you can help by working on the openSUSE bug report <a href="https://bugzilla.novell.com/show_bug.cgi?id=800105">HERE: https://bugzilla.novell.com/show_bug.cgi?id=800105</a></p>
+<p><strong>NOTE: Issues with these settings and suspend/resume</strong></p>
+<p>One of the settings recommended above enables the Intel graphics RC6 'deep sleep' states. This setting is probably the one with the greatest power saving benefit, but it seems in the 3.7 kernel shipped with openSUSE 12.3, this 'deep sleep' state is not reactivated when resuming from suspend.</p>
+<p>This means a big chunk of my recommended power savings go out of the window when resuming your laptop from sleep</p>
+<p>I have 2 solutions to this problem</p>
+<p><strong>Option 1)</strong> Help me fix it for everyone with a backported kernel fix for openSUSE 12.3. I've done quite a bit of work looking into this and I believe I may have identified the commits from more recent Linux kernel updates which resolve the issue, but I'm not confident enough in my abilities to put this together as a Kernel update for openSUSE 12.3 - I'd really appreciate if someone wiser or less risk-averse could look into it with/for me.<br />
+The Bug report tracking the issue can be found <a href="https://bugzilla.novell.com/show_bug.cgi?id=801341">HERE: https://bugzilla.novell.com/show_bug.cgi?id=801341</a></p>
+<p><strong>Option 2) </strong>An easy way out is to update your machine to use the latest stable (3.8) Linux kernel from our OBS repository using the following commands</p>
+<p>First add the repository with 'zypper ar' (note the command below should be on a single line)</p>
+<blockquote><p>zypper ar http://download.opensuse.org/repositories/Kernel:/stable/standard Kernel:stable</p></blockquote>
+<p>Then install the latest kernel from this recently added repository with zypper in</p>
+<blockquote><p>zypper dup --from Kernel:stable</p></blockquote>
+<p>Make sure to <a href="http://kernel.opensuse.org/packages/stable">read this page</a> before attempting this and also how to keep your old <a href="http://en.opensuse.org/SDB:Keep_multiple_kernel_versions">kernel installed just in case…</a></p>
+<p>Hopefully with all of this information people should be able to get their laptops running the already great openSUSE 12.3 running even more efficently. Please reply to this post to let me know how these settings work out for you</p>
+<p>Have a lot of fun!</p>
