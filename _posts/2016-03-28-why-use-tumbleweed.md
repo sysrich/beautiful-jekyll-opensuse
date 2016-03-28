@@ -9,7 +9,7 @@ Both are 'traditional', released-based distributions. They build it carefully ov
 
 If you're interested in an openSUSE like that, we have [Leap](http://www.opensuse.org), and I believe Leap to be better than Fedora and Ubuntu for a whole bunch of reasons, starting with the fact that Leap has an Enterprise codebase (SUSE Linux Enterprise to be exact) at it's heart with the openSUSE Project building a fully-fledged community distribution ontop of it.
 
-Today I want to talk about Tumbleweed  
+But today I want to talk about Tumbleweed  
 While Leap aims to be rock-solid, Tumbleweed rolls
 
 It's more like Arch and Gentoo in that regard. Tumbleweed today contains the latest packages of every software stack that has been packaged by the openSUSE Project. Latest kernel, libraries, desktop environments, everything in Tumbleweed can and does change regularly
