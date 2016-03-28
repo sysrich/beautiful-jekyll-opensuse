@@ -49,6 +49,7 @@ author:
   github: sysrich    # eg. daattali
   twitter: sysrich   # eg. daattali
   linkedin: in/sysrich  # eg. "pub/dean-attali/8/946/143"
+  googleplus: +RichardBrownSYS # eg. "+RichardBrownSYS"
   stackoverflow: yourlink  # eg. "3943160/daattali"
  
 # Select which links to show in the footer
@@ -59,6 +60,7 @@ footer-links-active:
   twitter: true
   github: true
   linkedin: true
+  googleplus: true
   stackoverflow: false
 
 # How to display the link to the website in the footer
