@@ -11,7 +11,7 @@ It's an excuse for me to learn a bit of Ruby, practice my markdown, and keep exe
 
 I plan to get back to blogging more often about the goings on in my world, especially about openSUSE and openQA
 
-And just to give Jekyll a bit of a stretch on my first real post, here's an openQA code snippit from {% include icon-github.html username="fcrozat" %}'s recent submission to
+And just to give Jekyll a bit of a stretch on my first real post, here's an openQA code snippit from Frederic Crozat's recent submission to
 [openQA](https://github.com/os-autoinst/os-autoinst-distri-opensuse)
 
 {% highlight perl %}
